@@ -1,0 +1,95 @@
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f9fc; 
+  padding: 30px;
+  color: #2c3e50;
+}
+
+/* Page Titles */
+.title {
+  text-align: center;
+  color: #2f4050; 
+  margin-top: 40px;
+  margin-bottom: 20px;
+  font-size: 36px;
+}
+
+/* Shared Table Styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 50px;
+  box-shadow: 0 4px 10px rgba(44, 62, 80, 0.08); 
+  background-color: #8fcade; 
+}
+
+th, td {
+  border: 1px solid #dee5ef; 
+  padding: 12px;
+  text-align: center;
+  font-size: 14px;
+}
+
+th {
+  background-color: #3b5998; 
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.course-table tbody tr:nth-child(even) {
+  background-color: #f0f6fa; 
+}
+
+
+.day {
+  background-color: #dceaf7; 
+  font-weight: bold;
+}
+
+.code1 { background-color: #d6f5ec; color: #1abc9c; font-weight: bold; }   
+.code2 { background-color: #daf5dd; color: #27ae60; font-weight: bold; }  
+.code3 { background-color: #d7eafc; color: #2980b9; font-weight: bold; }  
+.code4 { background-color: #fff5d1; color: #e2a03f; font-weight: bold; }    
+.code5 { background-color: #f1e4fa; color: #8e44ad; font-weight: bold; }  
+.code6 { background-color: #e4f1fb; color: #3498db; font-weight: bold; }  
+.code7 { background-color: #fde2e1; color: #e74c3c; font-weight: bold; }  
+.code8 { background-color: #e0e6ec; color: #34495e; font-weight: bold; }  
+.code9 { background-color: #d3f9f3; color: #16a085; font-weight: bold; } 
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  table, thead, tbody, th, td, tr {
+    display: block;
+  }
+
+  th {
+    background-color: #2f4e7c; 
+  }
+
+  td {
+    border: none;
+    border-bottom: 1px solid #d3dae6;
+    text-align: left;
+    padding-left: 50%;
+    position: relative;
+  }
+
+  td::before {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+    font-weight: bold;
+  }
+
+  .routine-table td::before {
+    content: attr(data-label);
+  }
+
+  .course-table td::before {
+    content: attr(data-label);
+  }
+}
